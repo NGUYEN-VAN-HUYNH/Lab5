@@ -227,7 +227,7 @@ int main(void)
    //HAL_ADC_GetValue(&hadc1);
    command_state = THREE_SECOND;
   /* USER CODE END 2 */
-   setTimer(0, 3000);
+   setTimer(0, 5000);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

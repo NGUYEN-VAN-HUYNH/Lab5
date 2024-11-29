@@ -64,8 +64,8 @@ all: main-build
 main-build: lab5_uart.elf secondary-outputs
 
 # Tool invocations
-lab5_uart.elf: $(OBJS) $(USER_OBJS) E:\EX_VXL_VDK\lab_5\LAB_5_uart\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "lab5_uart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\EX_VXL_VDK\lab_5\LAB_5_uart\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab5_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+lab5_uart.elf: $(OBJS) $(USER_OBJS) E:\EX_VXL_VDK\GIT_LAB_5_UART\LAB_5_uart\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "lab5_uart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\EX_VXL_VDK\GIT_LAB_5_UART\LAB_5_uart\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab5_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
